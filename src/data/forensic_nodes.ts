@@ -1,32 +1,37 @@
 export const FORENSIC_MANIFEST = {
   "load-bearing": {
     title: "Structural Social Infrastructure",
-    description: "The 'Folk Devil' as a functional necessity. In low-trust environments, the target provides the cohesion work that institutions cannot, becoming the anchor for cross-factional consensus.",
-    detail_level: "High: Architectural Mechanics",
-    source_ref: "Social Infrastructure of the Outcast, p.1"
+    description: "In a low-trust community, the target ‘bears the load’ of community cohesion by serving as a consensus target.",
+    detail_level: "2",
+    source_ref: "Folk Devil as Social Infrastructure, Abstract",
+    forensic_footnote: "The target absorbs the community's internal frictions and 'cohesion deficits,' allowing the group to function as a unified body without addressing its own underlying instability."
   },
-  "consensus": {
-    title: "Manufactured Consensus Technology",
-    description: "The synthetic unity achieved by disparate actors when they distill community anxieties into a single human repository (the consensus target).",
-    detail_level: "Moderate: Sociological Impact",
-    source_ref: "Folk Devil as Social Infrastructure, Abstract"
+  "poster": {
+    title: "The Concern Costume",
+    description: "The sanitized reality presented to the public, which conceals predatory intent behind a mask of virtue or community safety.",
+    detail_level: "2",
+    source_ref: "The Architecture of Social Ostracism, Section 1",
+    forensic_footnote: "The perpetrator claims control over the subject’s reality, pain, and destiny. Malice is framed as a moral imperative to recruit 'Unwitting Operatives'."
   },
-  "interiority": {
-    title: "The Perpetrator's Interiority",
-    description: "The cognitive landscape of the aggressor. Distinguishes between spontaneous community fear and the conscious, predatory 'juvenile game' mindset of an orchestrator.",
-    detail_level: "Deep: Psychological Forensic",
-    source_ref: "Architecture of Social Ostracism, p.1"
+  "machine": {
+    title: "Anomalous Clustering",
+    description: "The synchronized 'clustering' of coincidences across different cities, which reveals a coordinated effort rather than random events.",
+    detail_level: "2",
+    source_ref: "Structural Mechanics and Failure Modes, Section 7",
+    forensic_footnote: "The transition from victim to 'Executor of Truth' through the automated release of forensic records."
   },
-  "acoustic-containment": {
-    title: "Acoustic Containment",
-    description: "The saturation of social 'noise' and engineered chaos used to drown out the target's signal, ensuring their testimony is dismissed as paranoia.",
-    detail_level: "High: Counter-Intelligence Protocol",
-    source_ref: "Systemic Targeting & Social Infrastructure, p.4"
+  "truth": {
+    title: "Radical Transparency (AAO)",
+    description: "The practice of recording the unmanaged, raw truth as a 'Breadcrumb Web' to dismantle an orchestrator’s control over reality.",
+    detail_level: "2",
+    source_ref: "Forensic Analysis: Systemic Targeting, Page 4",
+    forensic_footnote: "Visibility as a shield. The transition from victim to 'Executor of Truth' through the automated release of forensic records."
   },
   "witness": {
     title: "The Forensic Footprint",
     description: "The transition from reactive victim to 'Operational Analyst.' Utilizing radical transparency (AAO) to log nodes and branches, making the unseen war visible.",
-    detail_level: "Max: Tactical Application",
-    source_ref: "Failure Modes of Folk Devil Construction, p.8"
+    detail_level: "2",
+    source_ref: "Failure Modes of Folk Devil Construction, p.8",
+    forensic_footnote: "An 'Access Agent' who mirrors vulnerabilities to gain proximity. Genuine shared history is harvested to fuel a psychological operation."
   }
 };
