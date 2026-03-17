@@ -89,21 +89,6 @@ export const AnalysisPanel: React.FC<AnalysisPanelProps> = ({ termId, onClose })
                   </p>
                 </div>
               </div>
-
-              <div className="grid grid-cols-3 bg-[#111] border-t border-[#1A1A1A]">
-                <div className="p-4 border-r border-[#1A1A1A] text-center">
-                  <h4 className="text-[8px] uppercase tracking-widest text-white/20 mb-1 font-mono">Confidence</h4>
-                  <p className="text-[10px] font-mono text-[#F27D26]">94.2%</p>
-                </div>
-                <div className="p-4 border-r border-[#1A1A1A] text-center">
-                  <h4 className="text-[8px] uppercase tracking-widest text-white/20 mb-1 font-mono">Source Type</h4>
-                  <p className="text-[10px] font-mono text-white/60">HUMINT</p>
-                </div>
-                <div className="p-4 text-center">
-                  <h4 className="text-[8px] uppercase tracking-widest text-white/20 mb-1 font-mono">Status</h4>
-                  <p className="text-[10px] font-mono text-emerald-500">VERIFIED</p>
-                </div>
-              </div>
             </div>
 
             {/* Detailed Components Section */}
