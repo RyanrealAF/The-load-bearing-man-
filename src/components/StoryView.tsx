@@ -6,47 +6,17 @@ interface StoryViewProps {
 }
 
 export const StoryView: React.FC<StoryViewProps> = ({ onTermClick }) => {
-  const fileMap: { [key: string]: string } = {
-    'social-infrastructure': '/retrieval/Social Infrastructure of the Outcast- A Forensic Analysis of Folk Devil Construction and Defensive Counter-Intelligence.pdf',
-    'folk-devil': '/retrieval/Forensic Analysis- The Structural Mechanics and Failure Modes of Folk Devil Construction.pdf',
-    'narrative-framework': '/retrieval/NARRATIVE PROCESS ANALYSIS_ Deconstructing the Information Economy.txt',
-    'systems-thinking': '/retrieval/Forensic Analysis- The Architecture of Systemic Targeting and Social Infrastructure.pdf',
-    'other-coding': '/retrieval/The Architecture of Social Ostracism- A Forensic Analysis of Folk Devil Construction.pdf',
-    'acoustic-containment': '/retrieval/The Architecture of Social Ostracism- A Forensic Analysis of Folk Devil Construction.pdf',
-    'soul-scrubbing': '/retrieval/The Architecture of Social Ostracism- A Forensic Analysis of Folk Devil Construction.pdf',
-  };
-
-  const Link = ({ id, children }: { id: string; children: React.ReactNode }) => {
-    const filePath = fileMap[id];
-
-    if (filePath) {
-      return (
-        <a
-          href={filePath}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group relative inline-block px-1 -mx-1 text-[#F27D26] border-b border-[#F27D26]/30 hover:bg-[#F27D26]/10 hover:border-[#F27D26] transition-all cursor-pointer font-medium"
-        >
-          {children}
-          <span className="absolute -top-4 left-1/2 -translate-x-1/2 text-[8px] font-mono opacity-0 group-hover:opacity-100 transition-opacity bg-[#F27D26] text-black px-1 leading-none py-0.5 pointer-events-none">
-            DOC
-          </span>
-        </a>
-      );
-    }
-
-    return (
-      <button
-        onClick={() => onTermClick(id)}
-        className="group relative inline-block px-1 -mx-1 text-[#F27D26] border-b border-[#F27D26]/30 hover:bg-[#F27D26]/10 hover:border-[#F27D26] transition-all cursor-pointer font-medium"
-      >
-        {children}
-        <span className="absolute -top-4 left-1/2 -translate-x-1/2 text-[8px] font-mono opacity-0 group-hover:opacity-100 transition-opacity bg-[#F27D26] text-black px-1 leading-none py-0.5 pointer-events-none">
-          ID:{id.slice(0, 4).toUpperCase()}
-        </span>
-      </button>
-    );
-  };
+  const Link = ({ id, children }: { id: string; children: React.ReactNode }) => (
+    <button
+      onClick={() => onTermClick(id)}
+      className="group relative inline-block px-1 -mx-1 text-[#F27D26] border-b border-[#F27D26]/30 hover:bg-[#F27D26]/10 hover:border-[#F27D26] transition-all cursor-pointer font-medium"
+    >
+      {children}
+      <span className="absolute -top-4 left-1/2 -translate-x-1/2 text-[8px] font-mono opacity-0 group-hover:opacity-100 transition-opacity bg-[#F27D26] text-black px-1 leading-none py-0.5 pointer-events-none">
+        ID:{id.slice(0, 4).toUpperCase()}
+      </span>
+    </button>
+  );
 
   const ScanIndicator = () => (
     <div className="flex items-center gap-2 mb-4 opacity-40">
