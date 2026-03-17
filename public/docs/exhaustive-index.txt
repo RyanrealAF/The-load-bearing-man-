@@ -1,0 +1,51 @@
+EXHAUSTIVE INDEX: THE LOAD-BEARING MAN
+This index provides a granular mapping between the story (Marcus’s Witness Testimony) and the technical framework (Forensic Social Architecture). Use this to navigate the deep-dive "Cards" and the master analysis.
+I. NARRATIVE NODES: THE STORY CHRONOLOGY
+1. THE COASTAL INGRESS (Chapter 1-2)
+* The Poster Version: The idealized California coast (sunscreen, brunch, Photoshop blue).
+   * Forensic Link: Consensus Reality
+* The Real Version: Vape shops, payday loans, and the "quiet argument" of the farmworker mural.
+   * Forensic Link: Ground-Level Truth
+* The Bicycle & Gear: Marcus’s mobile survival unit.
+   * Forensic Link: [Operational Mobility / Social Exclusion]
+2. THE SOCIAL FRICTION (Chapter 3-5)
+* The Taqueria & 7-Eleven: Locations where "vibe shifts" occur.
+   * Forensic Link: Surveillance Clusters / HUMINT Network
+* The "Kind" Stranger: Interactions that feel scripted or performative.
+   * Forensic Link: C2 by Insinuation / The Hero Complex
+* The Notebook (Day 9 Entry): The primary recording of the "two faces" of the city.
+   * Forensic Link: The Breadcrumb Web / External Hippocampus
+3. THE COLLABORATOR REVEAL (Chapter 6-8)
+* The Access Agent (Skittlez/Sheena): The "Trauma Twin" who mirrors Marcus’s past.
+   * Forensic Link: Strategic Proximity / Access Agent
+* The Mastermind (Emily) & Operative (Mike): The unseen orchestrators behind the curtain.
+   * Forensic Link: [Architect's Interiority / Asymmetry of Intent]
+* The Loyalty Test: Scripted interactions designed to trigger "Engineered Outrage."
+   * Forensic Link: [The Degradation Ritual / Social Test]
+4. THE TERMINAL PHASE (Chapter 9-End)
+* The Concrete Ledge: Marcus choosing to sleep on the "bones" of the city.
+   * Forensic Link: Allostatic Load / Physical Weathering
+* Seeing the Whole Machine: The moment of total pattern recognition.
+   * Forensic Link: Narrative Sovereignty
+* The Sleep of the Just: Marcus resting despite the sirens.
+   * Forensic Link: [The Exit Protocol / Mutually Assured Exposure]
+II. FRAMEWORK NODES: FORENSIC CONCEPTS
+1. SOCIAL ARCHITECTURE
+* Folk Devil Construction: The process of turning Marcus into a repository for community anxiety.
+* Load-Bearing Individual: The human infrastructure supporting a low-trust community.
+* Synthetic Unity: Cohesion achieved through the shared hatred/suspicion of a target.
+2. TACTICAL MODALITIES
+* C2 by Insinuation: Leading questions used to recruit "Unwitting Operatives."
+* HUMINT Network: A human intelligence grid composed of neighbors and service staff.
+* The Concern Costume: Harassment framed as "protecting the community."
+3. CLINICAL IMPACT
+* Allostatic Load: The cumulative physiological cost of engineered stress.
+* Hippocampal Atrophy: The neurological "liquidation" of memory through gaslighting.
+* Sleep Deprivation (Strategic): The use of noise and movement to prevent biological recovery.
+4. DETERRENCE & DEFENSE
+* The Breadcrumb Web: Logging every "Node and Branch" to preserve objective reality.
+* The Dead-Man's Switch: An automated disclosure protocol activated by 72-hour silence.
+* Visibility as Shield: The realization that the Architect's only power is the shadow.
+III. CROSS-REFERENCE TABLE: NARRATIVE VS. DATA
+| Story Element | Forensic Research Paper | Operational Term | | The Notebook | Forensic Analysis: Systemic Targeting | Breadcrumb Web | | The 3 a.m. Siren | Unseen War, Internal Wounds | Allostatic Load Trigger | | Skittlez (Sheena) | Social Infrastructure of the Outcast | Trauma Twin / Access Agent | | "Anyone noticed him?" | Forensic Analysis: Structural Mechanics | C2 by Insinuation | | The Concrete Ledge | Carried Weight: Folk Devil Effects | The Bones (Ground Reality) | | Emily/Mike | The Architecture of Social Ostracism | The Orchestrator / Architect |
+END OF INDEX
