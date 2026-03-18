@@ -8,7 +8,11 @@
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "db:create": "wrangler d1 create load_bearing_archive",
+    "db:schema:apply": "wrangler d1 execute load_bearing_archive --file=db/schema.sql",
+    "db:seed": "wrangler d1 execute load_bearing_archive --file=db/seed.sql",
+    "deploy:worker": "wrangler deploy"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.14",
@@ -28,6 +32,7 @@
     "tsx": "^4.21.0",
     "typescript": "~5.8.2",
     "vite": "^6.2.0",
-    "@types/express": "^4.17.21"
+    "@types/express": "^4.17.21",
+    "wrangler": "^3.57.0"
   }
 }

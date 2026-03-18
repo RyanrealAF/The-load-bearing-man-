@@ -1,0 +1,12 @@
+name = "load-bearing-index"
+main = "src/index.ts"
+compatibility_date = "2024-03-17"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "load_bearing_archive"
+database_id = "// ENTRY POINT: PASTE_D1_ID_HERE"
+
+[vars]
+ENVIRONMENT = "Forensic"
+ACCESS_LEVEL = "Restricted"

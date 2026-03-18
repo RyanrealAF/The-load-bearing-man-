@@ -1,20 +1,19 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# The Load-Bearing Man: A Forensic Analysis
 
-# Run and deploy your AI Studio app
+This project contains the source code and data for "The Load-Bearing Man," a narrative-driven forensic analysis of a systemic targeting campaign. The project is designed to be deployed as a queryable threat analysis, with a relational database schema that maps the narrative to the forensic data.
 
-This contains everything you need to run your app locally.
+## Technical Implementation
 
-View your app in AI Studio: https://ai.studio/apps/8e60a25d-04fa-42e9-a2e9-23802335ef8f
+The project is implemented as a serverless application on the Cloudflare Workers platform. The database is a Cloudflare D1 database, and the application is deployed automatically via a GitHub Actions workflow.
 
-## Run Locally
+### Database Schema
 
-**Prerequisites:**  Node.js
+The database schema is defined in the `D1 DATABASE SCHEMA (SQL ARCHITECTURE)` section of the project's technical specification. It consists of three tables:
 
+*   `Narrative_Nodes`: Contains the narrative content from the notebook.
+*   `Forensic_Mechanisms`: Contains the operational modalities identified in the papers.
+*   `Relational_Mapping`: Maps the narrative to the forensic data.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Deployment
+
+The application is deployed automatically to Cloudflare Workers whenever changes are pushed to the `main` branch. The deployment process is defined in the `.github/workflows/deploy.yml` file.

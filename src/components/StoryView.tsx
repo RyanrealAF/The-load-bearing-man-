@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
 import { X } from 'lucide-react';
-import { FORENSIC_MANIFEST } from '../data/forensic_nodes';
-import { DOC_INDEX } from '../data/doc-index';
-import { storyText } from '../data/story';
+import { folkDevil, unseenWar, carriedWeight } from '../data/content';
 
 interface StoryViewProps {
   onTermClick: (id: string) => void;
@@ -87,8 +85,7 @@ export const StoryView: React.FC<StoryViewProps> = ({ onTermClick }) => {
   );
 
   const ForensicNodeCard = ({ nodeId, onClose }: { nodeId: string; onClose: () => void }) => {
-    const node = FORENSIC_MANIFEST[nodeId as keyof typeof FORENSIC_MANIFEST];
-    const detailLevel = node.detail_level;
+    const node = folkDevil.find(n => n.tags.intelligence_type === 'structural_analysis');
 
     return (
       <ModalBackdrop onClose={onClose}>
@@ -102,14 +99,8 @@ export const StoryView: React.FC<StoryViewProps> = ({ onTermClick }) => {
           <button onClick={onClose} className="absolute top-2 right-2 text-white/50 hover:text-white">
             <X size={24} />
           </button>
-          <h2 className="text-2xl font-serif italic text-[#D4AF37] mb-4">{node.title}</h2>
-          <p className="text-white/80 font-mono mb-4">{node.description}</p>
-          {detailLevel === '1' || detailLevel === '2' ? (
-            <p className="text-white/50 text-xs font-mono">Source: {node.source_ref}</p>
-          ) : null}
-          {detailLevel === '2' ? (
-            <p className="text-white/50 text-xs font-mono mt-2">Forensic Footnote: {node.forensic_footnote}</p>
-          ) : null}
+          <h2 className="text-2xl font-serif italic text-[#D4AF37] mb-4">{node.section}</h2>
+          <p className="text-white/80 font-mono mb-4">{node.content}</p>
         </motion.div>
       </ModalBackdrop>
     );
@@ -120,23 +111,11 @@ export const StoryView: React.FC<StoryViewProps> = ({ onTermClick }) => {
       <section id="document-index" aria-label="Referenced Documents">
         <h2 class="text-2xl font-serif italic text-[#D4AF37] mb-4">Referenced Documents</h2>
         <ol className="space-y-4">
-          {DOC_INDEX.map((doc, i) => {
-            const isPDF = doc.format === "pdf";
-            const linkProps = isPDF
-              ? { target: "_blank", rel: "noopener noreferrer" }
-              : { download: true };
-
+          {unseenWar.map((doc, i) => {
             return (
-              <li id={doc.anchor} key={doc.id} className="border-t border-white/10 pt-4">
-                <strong className="font-mono text-white/80">{doc.title}</strong>
-                <span className="text-xs text-white/50 ml-2">[{doc.format.toUpperCase()}]</span>
-                <p className="text-sm text-white/60 mt-1">{doc.description}</p>
-                <div className="mt-2">
-                  <a href={doc.file} {...linkProps} className="text-[#D4AF37] hover:underline text-sm">
-                    {isPDF ? "View/Download" : "Download"}
-                  </a>
-                  <a href={`#cite-${i + 1}`} className="text-white/50 hover:underline text-xs ml-4">↑ Back to citation</a>
-                </div>
+              <li id={doc.section} key={doc.section} className="border-t border-white/10 pt-4">
+                <strong className="font-mono text-white/80">{doc.section}</strong>
+                <p className="text-sm text-white/60 mt-1">{doc.content}</p>
               </li>
             );
           })}
@@ -144,6 +123,8 @@ export const StoryView: React.FC<StoryViewProps> = ({ onTermClick }) => {
       </section>
     );
   };
+
+  const storyText = carriedWeight.map(p => p.content).join('\n\n');
 
   return (
     <div 
