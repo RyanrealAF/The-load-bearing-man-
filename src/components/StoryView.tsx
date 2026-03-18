@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
-import { X } from 'lucide-react';
 import { folkDevil, unseenWar, carriedWeight } from '../data/content';
 
 interface StoryViewProps {
@@ -26,7 +25,6 @@ const CHAPTER_COLORS = [
 ];
 
 export const StoryView: React.FC<StoryViewProps> = ({ onTermClick }) => {
-  const [activeNode, setActiveNode] = useState<string | null>(null);
   const [activeChapter, setActiveChapter] = useState(0);
   const storyRef = useRef<HTMLDivElement>(null);
 
@@ -65,53 +63,12 @@ export const StoryView: React.FC<StoryViewProps> = ({ onTermClick }) => {
     return processedText;
   };
 
-  const ScanIndicator = () => (
-    <div className="flex items-center gap-2 mb-4 opacity-40">
-      <div className="w-1 h-1 bg-[#F27D26] animate-ping" />
-      <span className="text-[8px] font-mono uppercase tracking-widest">Scanning Segment...</span>
-    </div>
-  );
-
-  const ModalBackdrop = ({ children, onClose }: { children: React.ReactNode, onClose: () => void }) => (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-black/50 z-40 flex items-center justify-center"
-      onClick={onClose}
-    >
-      {children}
-    </motion.div>
-  );
-
-  const ForensicNodeCard = ({ nodeId, onClose }: { nodeId: string; onClose: () => void }) => {
-    const node = folkDevil.find(n => n.tags.intelligence_type === 'structural_analysis');
-
-    return (
-      <ModalBackdrop onClose={onClose}>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
-          className="bg-[#0a0a0a] border border-[#D4AF37] p-6 rounded-lg shadow-lg z-50 w-full max-w-lg relative"
-          onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
-        >
-          <button onClick={onClose} className="absolute top-2 right-2 text-white/50 hover:text-white">
-            <X size={24} />
-          </button>
-          <h2 className="text-2xl font-serif italic text-[#D4AF37] mb-4">{node.section}</h2>
-          <p className="text-white/80 font-mono mb-4">{node.content}</p>
-        </motion.div>
-      </ModalBackdrop>
-    );
-  };
-
   const renderDocIndex = () => {
     return (
       <section id="document-index" aria-label="Referenced Documents">
-        <h2 class="text-2xl font-serif italic text-[#D4AF37] mb-4">Referenced Documents</h2>
+        <h2 className="text-2xl font-serif italic text-[#D4AF37] mb-4">Referenced Documents</h2>
         <ol className="space-y-4">
-          {unseenWar.map((doc, i) => {
+          {unseenWar.map((doc) => {
             return (
               <li id={doc.section} key={doc.section} className="border-t border-white/10 pt-4">
                 <strong className="font-mono text-white/80">{doc.section}</strong>
@@ -152,13 +109,11 @@ export const StoryView: React.FC<StoryViewProps> = ({ onTermClick }) => {
           if (target.classList.contains('node-trigger')) {
             const nodeId = target.getAttribute('data-node-id');
             if (nodeId) {
-              setActiveNode(nodeId);
+              onTermClick(nodeId);
             }
           }
         }}
       />
-
-      {activeNode && <ForensicNodeCard nodeId={activeNode} onClose={() => setActiveNode(null)} />}
 
       <footer className="mt-32 pt-12 border-t border-white/10">
         {renderDocIndex()}
